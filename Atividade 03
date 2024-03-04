@@ -1,0 +1,806 @@
+//questao 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int x = 10;
+    printf("%d\n", x);
+    float y = 5.0;
+    printf("%d%f\n", x, y);
+    printf("%d %f\n", x, y);
+
+    return 0;
+
+}
+
+//questao 2 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main (){
+    int x, z;
+    float y;
+    scanf("%d", &x);
+    scanf("%f", &y);
+    scanf("%d%f", &x, &y);
+    scanf("%d%d",&x, &z);
+    scanf("%d %d", &x, &z);
+    
+    return 0;
+}
+
+
+//questao 3
+
+#include <stdio.h>
+
+int main (){
+   char nome[30];
+   
+   printf("Digite seu nome: ");
+   scanf("%s", nome);
+   
+   
+   printf("Bem vindo(a), %s!\n", nome);
+   
+   return 0;
+}
+
+
+//questao 6
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, soma;
+
+    printf("Digite o primeiro número inteiro: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número inteiro: ");
+    scanf("%d", &num2);
+
+    soma = num1 + num2;
+
+    printf("A soma de %d e %d é: %d\n", num1, num2, soma);
+
+    return 0;
+}
+
+
+//questao 7
+
+#include <stdio.h>
+
+int main() {
+    float numero, quadrado;
+
+    printf("Digite um numero decimal: ");
+    scanf("%f", &numero);
+
+    quadrado = numero * numero;
+
+    printf("O quadrado de %.2f é %.2f\n", numero, quadrado);
+
+    return 0;
+}
+
+
+//questao 8
+
+#include <stdio.h>
+
+int main() {
+    int ano_nascimento;
+    int ano_atual;
+    int idade;
+
+    printf("Digite o seu ano de nascimento: ");
+    scanf("%d", &ano_nascimento);
+
+    printf("Digite o ano atual: ");
+    scanf("%d", &ano_atual);
+
+    // Calcula a idade
+    idade = ano_atual - ano_nascimento;
+
+    printf("Sua idade é: %d anos\n", idade);
+
+    return 0;
+}
+
+
+//questao 9
+
+
+#include <stdio.h>
+
+int main() {
+    char primeiro_nome[50];
+    char sobrenome[50];
+
+    printf("Digite seu primeiro nome: ");
+    scanf("%s", primeiro_nome);
+
+    printf("Digite seu sobrenome: ");
+    scanf("%s", sobrenome);
+
+    printf("Nome completo: %s %s\n", primeiro_nome, sobrenome);
+
+    return 0;
+}
+
+
+//questao 10
+
+
+#include <stdio.h>
+
+int main() {
+    int contador = 0;
+    int numero;
+
+    printf("Digite uma sequencia de numeros separados por espaco (digite uma letra para finalizar): ");
+    
+    while (scanf("%d", &numero) == 1) {
+        contador++;
+    }
+
+    printf("Foram digitados %d numeros.\n", contador);
+
+    return 0;
+}
+
+
+//questao 11
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char animal[50];
+
+    printf("Digite o nome de um animal: ");
+    scanf("%s", animal);
+
+    printf("O animal digitado foi: %s\n", animal);
+
+    return 0;
+}
+
+
+//questao 12
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char primeiro_nome[50];
+    char sobrenome[50];
+
+    printf("Digite seu primeiro nome: ");
+    scanf("%s", primeiro_nome);
+
+    printf("Digite seu sobrenome: ");
+    scanf("%s", sobrenome);
+
+    printf("Nome completo invertido: %s, %s\n", sobrenome, primeiro_nome);
+
+    return 0;
+}
+
+
+//questao 13
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char string[100];
+
+    printf("Digite uma string: ");
+    scanf("%s", string);
+
+    int tamanho = strlen(string);
+
+    printf("O tamanho da string é: %d\n", tamanho);
+
+    return 0;
+}
+
+
+//questao 14
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    if (numero % 2 == 0) {
+        printf("%d eh um numero par.\n", numero);
+    } else {
+        printf("%d eh um numero impar.\n", numero);
+    }
+
+    return 0;
+}
+
+
+//questao 15
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    if (numero > 0) {
+        printf("%d eh um numero positivo.\n", numero);
+    } else if (numero < 0) {
+        printf("%d eh um numero negativo.\n", numero);
+    } else {
+        printf("%d eh zero.\n", numero);
+    }
+
+    return 0;
+}
+
+
+//questao 16
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    // Solicita os dois números
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    // Verifica e exibe o maior número
+    if (num1 > num2) {
+        printf("O maior numero eh: %d\n", num1);
+    } else if (num2 > num1) {
+        printf("O maior numero eh: %d\n", num2);
+    } else {
+        printf("Os numeros sao iguais.\n");
+    }
+
+    return 0;
+}
+
+//questao 17
+
+#include <stdio.h>
+
+int main() {
+    float altura, peso, imc;
+
+    // Solicita a altura e o peso
+    printf("Digite a altura em metros: ");
+    scanf("%f", &altura);
+    printf("Digite o peso em quilogramas: ");
+    scanf("%f", &peso);
+
+    // Calcula o IMC
+    imc = peso / (altura * altura);
+
+    // Exibe o resultado
+    printf("O IMC calculado é: %.2f\n", imc);
+
+    return 0;
+}
+
+
+//questao 18
+
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+    int tamanho = 0;
+
+    // Solicita o nome
+    printf("Digite seu nome: ");
+    scanf("%s", nome);
+
+    // Calcula o tamanho do nome
+    while (nome[tamanho] != '\0') {
+        tamanho++;
+    }
+
+    // Verifica se o nome tem mais de 5 caracteres
+    if (tamanho > 5) {
+        printf("O nome digitado tem mais de 5 caracteres.\n");
+    } else {
+        printf("O nome digitado tem 5 caracteres ou menos.\n");
+    }
+
+    return 0;
+}
+
+//questao 19
+
+#include <stdio.h>
+
+int main() {
+    char estado_civil[50];
+
+    // Solicita o estado civil
+    printf("Digite seu estado civil: ");
+    scanf("%s", estado_civil);
+
+    // Verifica o estado civil e exibe a mensagem apropriada
+    int i = 0;
+    int casado = 1;
+    int solteiro = 1;
+
+    while (estado_civil[i] != '\0') {
+        if (estado_civil[i] != "casado"[i]) {
+            casado = 0;
+        }
+        if (estado_civil[i] != "solteiro"[i]) {
+            solteiro = 0;
+        }
+        i++;
+    }
+
+    if (casado) {
+        printf("Voce eh casado(a).\n");
+    } else if (solteiro) {
+        printf("Voce eh solteiro(a).\n");
+    } else {
+        printf("Estado civil nao reconhecido.\n");
+    }
+
+    return 0;
+}
+
+
+//questao 20
+#include <stdio.h>
+
+int main() {
+    float base, altura, area;
+
+    // Solicita a base e a altura
+    printf("Digite a base do retangulo: ");
+    scanf("%f", &base);
+    printf("Digite a altura do retangulo: ");
+    scanf("%f", &altura);
+
+    // Calcula a area
+    area = base * altura;
+
+    // Exibe o resultado
+    printf("A area do retangulo eh: %.2f\n", area);
+
+    return 0;
+}
+
+
+
+//questao 21
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char cidade[50];
+
+    // Solicita a cidade
+    printf("Digite o nome da sua cidade: ");
+    scanf("%s", cidade);
+
+    // Verifica se a cidade começa com a letra "S"
+    if (cidade[0] == 'S' || cidade[0] == 's') {
+        printf("O nome da sua cidade comeca com a letra 'S'.\n");
+    } else {
+        printf("O nome da sua cidade nao comeca com a letra 'S'.\n");
+    }
+
+    return 0;
+}
+
+
+//questao 22
+
+#include <stdio.h>
+
+int main() {
+    float num1, num2, resto;
+
+    // Solicita os dois números
+    printf("Digite o primeiro numero decimal: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo numero decimal: ");
+    scanf("%f", &num2);
+
+    // Calcula o resto da divisão
+    while (num1 >= num2) {
+        num1 -= num2;
+    }
+    resto = num1;
+
+    // Exibe o resultado
+    printf("O resto da divisao entre %.2f e %.2f eh: %.2f\n", num1, num2, resto);
+
+    return 0;
+}
+
+
+//questao 25 
+
+#include <stdio.h>
+
+int main() {
+    char data[11];
+    int dia, mes, ano;
+
+    // Solicita a data
+    printf("Digite uma data no formato dd/mm/aaaa: ");
+    scanf("%s", data);
+
+    // Extrai o dia, o mês e o ano
+    sscanf(data, "%d/%d/%d", &dia, &mes, &ano);
+
+    // Exibe o resultado
+    printf("Dia: %d\n", dia);
+    printf("Mes: %d\n", mes);
+    printf("Ano: %d\n", ano);
+
+    return 0;
+}
+
+
+//questao 26
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char cidade[50];
+    char estado[50];
+
+    // Solicita o nome da cidade e do estado
+    printf("Digite o nome da cidade: ");
+    scanf("%s", cidade);
+    printf("Digite o nome do estado: ");
+    scanf("%s", estado);
+
+    // Exibe a mensagem completa
+    printf("Voce mora em %s, %s.\n", cidade, estado);
+
+    return 0;
+}
+
+
+//questao 27
+
+
+#include <stdio.h>
+
+int main() {
+    int ano_nascimento;
+
+    // Solicita o ano de nascimento
+    printf("Digite seu ano de nascimento: ");
+    scanf("%d", &ano_nascimento);
+
+    // Exibe a mensagem de boas-vindas
+    printf("Bem-vindo ao nosso programa, nascido em %d!\n", ano_nascimento);
+
+    return 0;
+}
+
+
+//questao 28
+#include <stdio.h>
+
+int main() {
+    int numero;
+    char texto[50];
+
+    // Solicita o número inteiro e a string
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+    printf("Digite uma string: ");
+    scanf("%s", texto);
+
+    // Exibe a string resultante
+    printf("String resultante: %d %s\n", numero, texto);
+
+    return 0;
+}
+
+
+//questao 29
+
+#include <stdio.h>
+
+int main() {
+    char produto[50];
+    float preco;
+    char moeda[10];
+
+    // Solicita o nome do produto e o preço
+    printf("Digite o nome do produto: ");
+    scanf("%s", produto);
+    printf("Digite o preco do produto: ");
+    scanf("%f", &preco);
+    printf("Digite o simbolo da moeda: ");
+    scanf("%s", moeda);
+
+    // Exibe a mensagem completa
+    printf("%s - %s %.2f\n", produto, moeda, preco);
+
+    return 0;
+}
+
+
+//questao 30
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Solicita o número inteiro
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    // Exibe a mensagem com o dobro do número
+    printf("O dobro de %d eh: %d\n", numero, numero * 2);
+
+    return 0;
+}
+
+
+//questao 31
+
+#include <stdio.h>
+
+int main() {
+    char email[50];
+
+    // Solicita o endereço de e-mail
+    printf("Digite seu endereco de e-mail: ");
+    scanf("%s", email);
+
+    // Exibe a mensagem de agradecimento
+    printf("Obrigado por fornecer seu endereco de e-mail %s!\n", email);
+
+    return 0;
+}
+
+//questao 32
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    // Solicita os dois números inteiros
+    printf("Digite o primeiro numero inteiro: ");
+    scanf("%d", &num1);
+    printf("Digite o segundo numero inteiro: ");
+    scanf("%d", &num2);
+
+    // Exibe a soma, a diferença, o produto e o quociente
+    printf("Soma: %d\n", num1 + num2);
+    printf("Diferenca: %d\n", num1 - num2);
+    printf("Produto: %d\n", num1 * num2);
+    if (num2 != 0) {
+        printf("Quociente: %d\n", num1 / num2);
+    } else {
+        printf("Nao e possivel dividir por zero.\n");
+    }
+
+    return 0;
+}
+
+//questao 33
+
+#include <stdio.h>
+
+int main() {
+    float base, altura;
+
+    // Solicita a base e a altura do triângulo
+    printf("Digite a base do triangulo: ");
+    scanf("%f", &base);
+    printf("Digite a altura do triangulo: ");
+    scanf("%f", &altura);
+
+    // Calcula e exibe a área do triângulo
+    float area = (base * altura) / 2;
+    printf("A area do triangulo eh: %.2f\n", area);
+
+    return 0;
+}
+
+//questao 34
+
+#include <stdio.h>
+#define PI 3.14159
+
+int main() {
+    float raio;
+
+    // Solicita o raio da circunferência
+    printf("Digite o raio da circunferencia: ");
+    scanf("%f", &raio);
+
+    // Calcula e exibe o perímetro da circunferência
+    float perimetro = 2 * PI * raio;
+    printf("O perimetro da circunferencia eh: %.2f\n", perimetro);
+
+    return 0;
+}
+
+
+//questao 35 
+#include <stdio.h>
+
+int main() {
+    float base, altura;
+
+    // Solicita a base e a altura do retângulo
+    printf("Digite a base do retangulo: ");
+    scanf("%f", &base);
+    printf("Digite a altura do retangulo: ");
+    scanf("%f", &altura);
+
+    // Calcula e exibe o perímetro do retângulo
+    float perimetro = 2 * (base + altura);
+    printf("O perimetro do retangulo eh: %.2f\n", perimetro);
+
+    return 0;
+}
+
+
+//questao 36
+
+#include <stdio.h>
+
+int main() {
+    float num1, num2, num3, media;
+
+    // Solicita os três números decimais
+    printf("Digite o primeiro numero decimal: ");
+    scanf("%f", &num1);
+    printf("Digite o segundo numero decimal: ");
+    scanf("%f", &num2);
+    printf("Digite o terceiro numero decimal: ");
+    scanf("%f", &num3);
+
+    // Calcula a média aritmética
+    media = (num1 + num2 + num3) / 3;
+
+    // Exibe a média
+    printf("A media aritmetica dos numeros eh: %.2f\n", media);
+
+    return 0;
+}
+
+//questao 37
+
+#include <stdio.h>
+
+int main() {
+    int idade, meses, dias;
+
+    // Solicita a idade do usuário
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    // Calcula quantos meses e dias ele já viveu
+    meses = idade * 12;
+    dias = idade * 365;
+
+    // Exibe o resultado
+    printf("Voce ja viveu aproximadamente %d meses e %d dias.\n", meses, dias);
+
+    return 0;
+}
+
+
+//questao 38
+
+#include <stdio.h>
+
+int main() {
+    float valor_em_reais, cotacao_dolar, valor_em_dolares;
+
+    // Solicita o valor em reais e a cotação do dólar
+    printf("Digite o valor em reais: ");
+    scanf("%f", &valor_em_reais);
+    printf("Digite a cotacao do dolar: ");
+    scanf("%f", &cotacao_dolar);
+
+    // Converte o valor para dólares
+    valor_em_dolares = valor_em_reais / cotacao_dolar;
+
+    // Exibe o resultado
+    printf("O valor em dolares eh: %.2f\n", valor_em_dolares);
+
+    return 0;
+}
+
+
+//questao 39
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float numero;
+    int numero_arredondado;
+
+    // Solicita o número decimal
+    printf("Digite um numero decimal: ");
+    scanf("%f", &numero);
+
+    // Arredonda o número para o inteiro mais próximo
+    numero_arredondado = round(numero);
+
+    // Exibe o resultado
+    printf("O numero arredondado eh: %d\n", numero_arredondado);
+
+    return 0;
+}
+
+
+//questao 40
+
+#include <stdio.h>
+
+int main() {
+    int n1, n2, n3, resultado;
+
+    // Solicita os três números inteiros
+    printf("Digite o primeiro numero inteiro: ");
+    scanf("%d", &n1);
+    printf("Digite o segundo numero inteiro: ");
+    scanf("%d", &n2);
+    printf("Digite o terceiro numero inteiro: ");
+    scanf("%d", &n3);
+
+    // Calcula e exibe o resultado da operação
+    resultado = (n1 + n2) * n3;
+    printf("O resultado da operacao eh: %d\n", resultado);
+
+    return 0;
+}
+
+
+//questao 41
+
+#include <stdio.h>
+
+int main() {
+    float celsius, fahrenheit;
+
+    // Solicita a temperatura em graus Celsius
+    printf("Digite a temperatura em graus Celsius: ");
+    scanf("%f", &celsius);
+
+    // Converte a temperatura para Fahrenheit
+    fahrenheit = (celsius * 9/5) + 32;
+
+    // Exibe o resultado
+    printf("A temperatura em Fahrenheit eh: %.2f\n", fahrenheit);
+
+    return 0;
+}
